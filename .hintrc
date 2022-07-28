@@ -1,0 +1,14 @@
+{
+  "connector": "local",
+  "extends": ["accessibility", "progressive-web-apps"],
+  "formatters": ["html", "summary"],
+  "hintsTimeout": 120000,
+  "hints": {
+    "no-inline-styles": [
+      "warning",
+      {
+        "requireNoStyleElement": true
+      }
+    ]
+  }
+}
