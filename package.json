@@ -8,7 +8,7 @@
     "yarn": "please-use-npm"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": " cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -53,6 +53,7 @@
     "@typescript-eslint/parser": "^5.31.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "eslint": "^8.20.0",
     "eslint-config-next": "^12.2.3",
     "eslint-config-prettier": "^8.5.0",
