@@ -7,16 +7,19 @@ module.exports = {
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   extends: [
     'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
     'next',
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:storybook/recommended',
   ],
   rules: {
     'react/no-unescaped-entities': 'off',
-    'no-unused-vars': [1, { args: 'after-used', argsIgnorePattern: '^_' }],
     'no-console': 'warn',
+    '@typescript-eslint/no-unused-vars': [
+      1,
+      { args: 'after-used', argsIgnorePattern: '^_' },
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
     'react/jsx-curly-brace-presence': [
@@ -27,7 +30,6 @@ module.exports = {
       },
     ],
     //#region  //*=========== Unused Import ===========
-    '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': [
       'warn',
