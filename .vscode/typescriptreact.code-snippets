@@ -30,13 +30,14 @@
     "prefix": "rc",
     "body": [
       "import * as React from 'react';\n",
-      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
       "  return (",
-      "    <div>",
-      "      $0",
+      "    <div$2>",
+      "      $3",
       "    </div>",
       "  )",
-      "}"
+      "}\n",
+      "export default ${1:${TM_FILENAME_BASE}}"
     ]
   },
   "React Functional Component with Props": {
@@ -44,15 +45,17 @@
     "body": [
       "import * as React from 'react';\n",
       "import clsxm from '@/lib/clsxm';\n",
-      "type ${1:${TM_FILENAME_BASE}}Props= {\n",
-      "} & React.ComponentPropsWithoutRef<'div'>\n",
-      "export default function ${1:${TM_FILENAME_BASE}}({className, ...rest}: ${1:${TM_FILENAME_BASE}}Props) {",
+      "type ${1:${TM_FILENAME_BASE}}Props= {",
+      "$4",
+      "} & React.ComponentPropsWithoutRef<'div$2'>\n",
+      "const ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = ({className, ...rest}) => {",
       "  return (",
-      "    <div className={clsxm('', className)} {...rest}>",
-      "      $0",
+      "    <div$2 className={clsxm('', className)} {...rest}>",
+      "      $3",
       "    </div>",
       "  )",
-      "}"
+      "}\n",
+      "export default ${1:${TM_FILENAME_BASE}}"
     ]
   },
   //#endregion  //*======== React ===========
@@ -84,23 +87,26 @@
     "body": [
       "import * as React from 'react';\n",
       "import AppLayout from '@/components/layouts/AppLayout';\n",
-      "export default function ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page() {",
+      "import { NextPageWithLayout } from '@/pages/page';\n",
+      "const ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page: NextPageWithLayout = () => {",
       "  return (",
-      "    <AppLayout>",
-      "      <main>\n",
-      "        <section className=''>",
-      "          <div className='layout py-20 min-h-screen'>",
-      "            $0",
-      "          </div>",
-      "        </section>",
-      "      </main>",
-      "    </AppLayout>",
+      "    <main>",
+      "      <section className=''>",
+      "        <div className='layout py-20 min-h-screen'>",
+      "          $0",
+      "        </div>",
+      "      </section>",
+      "    </main>",
       "  )",
-      "}"
+      "}\n",
+      "${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page.getLayout = (page) => {",
+      "  return <AppLayout>{page}</AppLayout>;",
+      "};\n",
+      "export default ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page;"
     ]
   },
   "Next API": {
-    "prefix": "napi",
+    "prefix": "napi-get",
     "body": [
       "import { NextApiRequest, NextApiResponse } from 'next';\n",
       "export default async function ${1:${TM_FILENAME_BASE}}(req: NextApiRequest, res: NextApiResponse) {",
