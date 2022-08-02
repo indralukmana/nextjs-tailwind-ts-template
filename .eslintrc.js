@@ -12,7 +12,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'plugin:storybook/recommended',
-    'plugin:storybook/recommended',
   ],
   rules: {
     'react/no-unescaped-entities': 'off',
