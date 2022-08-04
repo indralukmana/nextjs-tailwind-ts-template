@@ -1,4 +1,15 @@
 {
+  //#region  //*=========== JS ===========
+  "Console Log": {
+    "prefix": "clg",
+    "body": ["console.log($1)"]
+  },
+  "Console Error": {
+    "prefix": "cle",
+    "body": ["console.error($1)"]
+  },
+  //#region  //*=========== JS ===========
+
   //#region  //*=========== React ===========
   "import React": {
     "prefix": "ir",
