@@ -6,16 +6,14 @@ import { NextPageWithLayout } from '@/pages/page';
 
 const IndexPage: NextPageWithLayout = () => {
   return (
-    <main>
-      <section className="">
-        <div className="layout min-h-screen py-20">test dashboard</div>
-      </section>
-    </main>
+    <section className="">
+      <div>Home</div>
+    </section>
   );
 };
 
 export default IndexPage;
 
 IndexPage.getLayout = (page) => {
-  return <AppLayout pageTitle="test">{page}</AppLayout>;
+  return <AppLayout pageTitle="Home">{page}</AppLayout>;
 };

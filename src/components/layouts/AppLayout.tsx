@@ -9,11 +9,11 @@ const AppLayout: React.FC<AppLayoutProps> = ({
 }) => {
   // Put Header or Footer Here
   return (
-    <div className="min-h-full bg-blue-400">
+    <div className="mx-auto max-w-screen-2xl ">
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      {children}
+      <main className="min-h-[calc(100vh-0px)]">{children}</main>
     </div>
   );
 };
