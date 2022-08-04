@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     'react/no-unescaped-entities': 'off',
     'no-console': 'warn',
+    curly: 'error',
     '@typescript-eslint/no-unused-vars': [
       1,
       { args: 'after-used', argsIgnorePattern: '^_' },
