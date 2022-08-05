@@ -12,7 +12,7 @@
 
   //#region  //*=========== React ===========
   "import React": {
-    "prefix": "ir",
+    "prefix": "imr",
     "body": ["import * as React from 'react';"]
   },
   "React.useState": {
@@ -22,11 +22,11 @@
     ]
   },
   "React.useEffect": {
-    "prefix": "uf",
+    "prefix": "usef",
     "body": ["React.useEffect(() => {", "  $0", "}, []);"]
   },
   "React.useReducer": {
-    "prefix": "ur",
+    "prefix": "usr",
     "body": [
       "const [state, dispatch] = React.useReducer(${0:someReducer}, {",
       "  ",
@@ -34,11 +34,11 @@
     ]
   },
   "React.useRef": {
-    "prefix": "urf",
+    "prefix": "usrf",
     "body": ["const ${1:someRef} = React.useRef($0)"]
   },
   "React Functional Component": {
-    "prefix": "rc",
+    "prefix": "rfc",
     "body": [
       "import * as React from 'react';\n",
       "const ${1:${TM_FILENAME_BASE}} = () => {",
@@ -52,18 +52,18 @@
     ]
   },
   "React Functional Component with Props": {
-    "prefix": "rcp",
+    "prefix": "rfcp",
     "body": [
       "import * as React from 'react';\n",
       "import clsxm from '@/lib/clsxm';\n",
-      "type ${1:${TM_FILENAME_BASE}}Props= {",
+      "interface ${1:${TM_FILENAME_BASE}}Props {",
       "$4",
-      "} & React.ComponentPropsWithoutRef<'div$2'>\n",
-      "const ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = ({className, ...rest}) => {",
+      "}\n",
+      "const ${1:${TM_FILENAME_BASE}}: React.FC<${1:${TM_FILENAME_BASE}}Props> = ({$5}) => {",
       "  return (",
-      "    <div$2 className={clsxm('', className)} {...rest}>",
+      "    <div$2 className={clsxm('')}>",
       "      $3",
-      "    </div>",
+      "    </div$2>",
       "  )",
       "}\n",
       "export default ${1:${TM_FILENAME_BASE}}"
