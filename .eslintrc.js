@@ -4,6 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   extends: [
     'eslint:recommended',
@@ -15,12 +16,8 @@ module.exports = {
   ],
   rules: {
     'react/no-unescaped-entities': 'off',
-    'no-console': 'warn',
+    'no-console': ['warn', { allow: ['error'] }],
     curly: 'error',
-    '@typescript-eslint/no-unused-vars': [
-      1,
-      { args: 'after-used', argsIgnorePattern: '^_' },
-    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
     'react/jsx-curly-brace-presence': [
