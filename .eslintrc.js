@@ -12,11 +12,7 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
-    'plugin:mdx/recommended',
   ],
-  settings: {
-    'mdx/code-blocks': true,
-  },
   rules: {
     'react/no-unescaped-entities': 'off',
     'no-console': ['warn', { allow: ['error'] }],
@@ -76,4 +72,19 @@ module.exports = {
     React: true,
     JSX: true,
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['*.mdx'],
+      extends: 'plugin:mdx/recommended',
+      settings: {
+        'mdx/code-blocks': true,
+      },
+    },
+  ],
 };
