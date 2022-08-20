@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 
+import '@fontsource/inter/variable-full.css';
 import '../styles/globals.css';
 
 import { NextPageWithLayout } from '@/pages/page';
