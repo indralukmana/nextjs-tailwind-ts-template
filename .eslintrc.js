@@ -19,6 +19,7 @@ module.exports = {
     curly: 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     'react/jsx-curly-brace-presence': [
       'warn',
       {

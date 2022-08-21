@@ -52,5 +52,10 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      animation: ['hover', 'group-hover'],
+    },
+  },
   plugins: [require('@tailwindcss/forms')],
 };

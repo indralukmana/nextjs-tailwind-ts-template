@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const IndexPage: NextPageWithLayout<
+const PostsPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ posts }) => {
   return (
@@ -40,8 +40,8 @@ const IndexPage: NextPageWithLayout<
   );
 };
 
-export default IndexPage;
+export default PostsPage;
 
-IndexPage.getLayout = (page) => {
+PostsPage.getLayout = (page) => {
   return <AppLayout pageTitle="Home">{page}</AppLayout>;
 };
