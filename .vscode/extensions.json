@@ -5,6 +5,8 @@
     "dbaeumer.vscode-eslint",
     "aaron-bond.better-comments",
     "mikestead.dotenv",
-    "rangav.vscode-thunder-client"
+    "rangav.vscode-thunder-client",
+    "oouo-diogo-perdigao.docthis",
+    "MS-vsliveshare.vsliveshare"
   ]
 }
