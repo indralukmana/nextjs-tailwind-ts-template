@@ -22,6 +22,8 @@ export const getStaticProps = async () => {
 const IndexPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ posts }) => {
+  // const test = 10;
+
   return (
     <div className="grid grid-cols-1 gap-4 px-4 py-6 md:grid-cols-3 ">
       {posts.map((post) => (
