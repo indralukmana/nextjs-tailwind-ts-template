@@ -5,13 +5,19 @@ module.exports = {
     node: true,
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'unused-imports',
+    'sonarjs',
+  ],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'next',
     'next/core-web-vitals',
     'prettier',
+    'plugin:sonarjs/recommended',
   ],
   rules: {
     'react/no-unescaped-entities': 'off',

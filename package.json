@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=16.15.0",
-    "npm": ">=8.5.5",
+    "node": ">=16.17.0",
+    "npm": ">=8.15.0",
     "yarn": "please-use-npm"
   },
   "scripts": {
@@ -53,6 +53,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-mdx": "^2.0.2",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.15.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.5.0",
