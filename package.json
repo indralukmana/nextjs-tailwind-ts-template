@@ -12,7 +12,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\"",
     "prettier": "prettier --write .",
     "lint:fix": "eslint src --fix && npm run format",
     "lint:strict": "eslint --max-warnings=0 --ext js,tsx,mdx,md src ",
@@ -20,7 +20,9 @@
     "test:watch": "jest --watch",
     "test": "jest",
     "format": "prettier -w .",
-    "format:check": "prettier -c ."
+    "format:check": "prettier -c .",
+    "dev:up": "docker-compose up --build --force-recreate",
+    "prod:up": "docker-compose -f docker-compose.production.yml up --build --force-recreate"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.12",
