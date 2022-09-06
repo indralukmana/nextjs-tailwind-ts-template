@@ -27,7 +27,7 @@ const PostsPage: NextPageWithLayout<
       {posts.map((post) => (
         <UnstyledLink href={post.url} key={post._id} className="text-gray-100">
           <section className="flex flex-col space-y-2 rounded-lg border border-slate-500 p-4 hover:bg-slate-800">
-            <h2 className="block text-base font-semibold">{post.title}</h2>
+            <h2 className="block text-2xl font-semibold">{post.title}</h2>
             <time dateTime={post.date} className="text-sm font-thin">
               {format(new Date(post.date), 'd LLLL yyyy')}
             </time>

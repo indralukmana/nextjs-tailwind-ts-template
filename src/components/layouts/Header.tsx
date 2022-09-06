@@ -29,6 +29,9 @@ const Header: React.FC<HeaderProps> = ({ classNames }) => {
         <li>
           <UnderlineLink href="/about">About</UnderlineLink>
         </li>
+        <li>
+          <UnderlineLink href="/artworks">Artworks</UnderlineLink>
+        </li>
       </ul>
     </header>
   );
