@@ -4,13 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-    'simple-import-sort',
-    'unused-imports',
-    'sonarjs',
-  ],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -23,6 +17,10 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'no-console': ['warn', { allow: ['error'] }],
     curly: 'error',
+    '@typescript-eslint/no-unused-vars': [
+      1,
+      { args: 'after-used', argsIgnorePattern: '^_' },
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/display-name': 'off',
     '@typescript-eslint/no-empty-interface': 'off',
