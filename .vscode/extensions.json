@@ -7,6 +7,16 @@
     "mikestead.dotenv",
     "rangav.vscode-thunder-client",
     "oouo-diogo-perdigao.docthis",
-    "MS-vsliveshare.vsliveshare"
+    "MS-vsliveshare.vsliveshare",
+    "vivaxy.vscode-conventional-commits",
+    "quicktype.quicktype",
+    "42Crunch.vscode-openapi",
+    "formulahendry.auto-rename-tag",
+    "eamodio.gitlens",
+    "christian-kohler.path-intellisense",
+    "foxundermoon.shell-format",
+    "jock.svg",
+    "redhat.vscode-yaml",
+    "DotJoshJohnson.xml"
   ]
 }
