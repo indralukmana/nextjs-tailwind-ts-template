@@ -9,39 +9,39 @@ import { NextPageWithLayout } from '@/pages/page';
 import { allPosts } from '.contentlayer/generated';
 
 export async function getStaticPaths() {
-  const paths: string[] = allPosts.map((post) => post.url);
-  return {
-    paths,
-    fallback: false,
-  };
+	const paths: string[] = allPosts.map((post) => post.url);
+	return {
+		paths,
+		fallback: false,
+	};
 }
 
 export const getStaticProps = async ({
-  params,
+	params,
 }: GetStaticPropsContext<{ slug: string }>) => {
-  const post = allPosts.find(
-    (post) => post._raw.flattenedPath === `posts/${params?.slug}`
-  );
+	const post = allPosts.find(
+		(post) => post._raw.flattenedPath === `posts/${params?.slug}`
+	);
 
-  return {
-    props: { post },
-  };
+	return {
+		props: { post },
+	};
 };
 
 const PostsPage: NextPageWithLayout<
-  InferGetStaticPropsType<typeof getStaticProps>
+	InferGetStaticPropsType<typeof getStaticProps>
 > = ({ post }) => {
-  const MDXContent = useMDXComponent(post?.body.code ?? '');
+	const MDXContent = useMDXComponent(post?.body.code ?? '');
 
-  return (
-    <section className="">
-      <MDXContent />
-    </section>
-  );
+	return (
+		<section className="">
+			<MDXContent />
+		</section>
+	);
 };
 
 PostsPage.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
+	return <AppLayout>{page}</AppLayout>;
 };
 
 export default PostsPage;
