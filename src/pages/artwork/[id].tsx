@@ -5,7 +5,7 @@ import AppLayout from '@/components/layouts/AppLayout';
 
 import { NextPageWithLayout } from '@/pages/page';
 
-const PostsPage: NextPageWithLayout<> = () => {
+const PostsPage: NextPageWithLayout<unknown> = () => {
 	const { query } = useRouter();
 
 	return (

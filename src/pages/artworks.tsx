@@ -20,7 +20,7 @@ const ArtworkPage: NextPageWithLayout<
 > = ({ data }) => {
 	return (
 		<div className="grid grid-cols-4 gap-4">
-			{data.map((it) => (
+			{data.map((it: { id: string; title: string }) => (
 				<div key={it.id}>
 					<UnstyledLink href={'/artwork/' + it.id}>
 						<div className="rounded-md border bg-green-600 p-5 shadow-sm">
