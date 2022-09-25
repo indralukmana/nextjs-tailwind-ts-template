@@ -4,7 +4,7 @@
 		"esbenp.prettier-vscode",
 		"dbaeumer.vscode-eslint",
 		"aaron-bond.better-comments",
-		"mikestead.dotenv",
+		"IronGeek.vscode-env",
 		"rangav.vscode-thunder-client",
 		"oouo-diogo-perdigao.docthis",
 		"MS-vsliveshare.vsliveshare",
