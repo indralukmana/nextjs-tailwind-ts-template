@@ -58,8 +58,8 @@
 	}
 
 	body,
-	.p {
-		@apply font-primary text-sm md:text-base;
+	p {
+		@apply mt-6 text-base leading-7 text-zinc-400;
 	}
 	/* #endregion  /**======== Typography =========== */
 }

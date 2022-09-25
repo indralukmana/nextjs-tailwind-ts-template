@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
 
 import '@fontsource/inter/variable-full.css';
 import '../styles/globals.css';
@@ -13,7 +14,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 	// Use the layout defined at the page level, if available
 	const getLayout = Component.getLayout || ((page) => page);
 
-	return getLayout(<Component {...pageProps} />);
+	return (
+		<ThemeProvider attribute="class">
+			{getLayout(<Component {...pageProps} />)}
+		</ThemeProvider>
+	);
 }
 
 export default MyApp;

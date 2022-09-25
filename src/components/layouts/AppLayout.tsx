@@ -11,12 +11,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({
 }) => {
 	// Put Header or Footer Here
 	return (
-		<div className="mx-auto max-w-screen-2xl bg-slate-900 text-gray-100">
+		<div className="mx-auto text-zinc-800 dark:bg-black dark:text-zinc-100">
 			<Head>
 				<title>{pageTitle}</title>
 			</Head>
-			<Header classNames="h-[72px] max-w-[52rem] lg:max-w-6xl" />
-			<main className="mx-auto min-h-[calc(100vh-72px)] max-w-[52rem] px-4 md:px-8 lg:max-w-6xl xl:px-12">
+			<Header classNames="max-w-[52rem] lg:max-w-6xl" />
+			<main className="mx-auto min-h-[calc(100vh-72px)] max-w-[52rem] px-4 dark:bg-zinc-900 md:px-8 lg:max-w-6xl xl:px-12">
 				{children}
 			</main>
 		</div>
