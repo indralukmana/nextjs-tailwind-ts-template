@@ -1,9 +1,8 @@
-import { useTheme } from 'next-themes';
 import * as React from 'react';
-import { BsMoonStarsFill, BsSunFill } from 'react-icons/bs';
 
 import clsxm from '@/lib/clsxm';
 
+import ThemeToggleButton from '@/components/layouts/ThemeToggleButton';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
@@ -37,8 +36,6 @@ const links: Link[] = [
 ];
 
 const Header: React.FC<HeaderProps> = ({ classNames }) => {
-	const { theme, setTheme } = useTheme();
-
 	return (
 		<header
 			className={clsxm(
@@ -51,18 +48,7 @@ const Header: React.FC<HeaderProps> = ({ classNames }) => {
 			</UnstyledLink>
 			<Links links={links} />
 
-			<button
-				onClick={() => {
-					if (theme === 'dark') {
-						setTheme('light');
-					} else {
-						setTheme('dark');
-					}
-				}}
-			>
-				{theme === 'dark' && <BsMoonStarsFill />}
-				{theme === 'light' && <BsSunFill />}
-			</button>
+			<ThemeToggleButton />
 		</header>
 	);
 };
