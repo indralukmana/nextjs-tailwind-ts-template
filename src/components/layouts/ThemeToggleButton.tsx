@@ -26,6 +26,7 @@ const ThemeToggleButton: React.FC<ThemeToggleButtonProps> = () => {
 					setTheme('dark');
 				}
 			}}
+			className="rounded-full border border-zinc-500 p-3"
 		>
 			{theme === 'dark' && <BsMoonStarsFill />}
 			{theme === 'light' && <BsSunFill />}

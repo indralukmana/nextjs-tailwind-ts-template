@@ -1,8 +1,10 @@
 import { InferGetStaticPropsType } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import * as React from 'react';
+import { BsGithub, BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 import AppLayout from '@/components/layouts/AppLayout';
+import UnstyledLink from '@/components/links/UnstyledLink';
 
 import { NextPageWithLayout } from '@/pages/page';
 
@@ -22,8 +24,41 @@ const AboutPage: NextPageWithLayout<
 	const MDXContent = useMDXComponent(about?.body.code ?? '');
 
 	return (
-		<section className="">
-			<MDXContent components={{}} />
+		<section className="grid gap-10 py-10 md:grid-cols-[3fr_1fr] md:py-40">
+			<div>
+				<MDXContent components={{}} />
+			</div>
+			<div>
+				<ul className="grid grid-cols-1 gap-8">
+					<li>
+						<UnstyledLink
+							href="https://twitter.com/"
+							className="flex items-center space-x-4"
+						>
+							<BsTwitter size={20} />
+							<span>Follow on Twitter</span>
+						</UnstyledLink>
+					</li>
+					<li>
+						<UnstyledLink
+							href="https://github.com/"
+							className="flex items-center space-x-4"
+						>
+							<BsGithub size={20} />
+							<span>Follow on GitHub</span>
+						</UnstyledLink>
+					</li>
+					<li>
+						<UnstyledLink
+							href="https://www.linkedin.com/"
+							className="flex items-center space-x-4"
+						>
+							<BsLinkedin size={20} />
+							<span>Follow on LinkedIn</span>
+						</UnstyledLink>
+					</li>
+				</ul>
+			</div>
 		</section>
 	);
 };
