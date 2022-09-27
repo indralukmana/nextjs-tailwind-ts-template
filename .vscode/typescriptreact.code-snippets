@@ -12,17 +12,17 @@
 
 	//#region  //*=========== React ===========
 	"import React": {
-		"prefix": "imr",
+		"prefix": "importre",
 		"body": ["import * as React from 'react';"]
 	},
 	"React.useState": {
-		"prefix": "us",
+		"prefix": "usestate",
 		"body": [
 			"const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState<$3>(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
 		]
 	},
 	"React.useEffect": {
-		"prefix": "usef",
+		"prefix": "useefect",
 		"body": ["React.useEffect(() => {", "  $0", "}, []);"]
 	},
 	"React.useReducer": {
@@ -34,11 +34,11 @@
 		]
 	},
 	"React.useRef": {
-		"prefix": "usrf",
+		"prefix": "useref",
 		"body": ["const ${1:someRef} = React.useRef($0)"]
 	},
 	"React Functional Component": {
-		"prefix": "rfc",
+		"prefix": "const-funct-comp",
 		"body": [
 			"import * as React from 'react';\n",
 			"const ${1:${TM_FILENAME_BASE}} = () => {",
@@ -52,7 +52,7 @@
 		]
 	},
 	"React Functional Component with Props": {
-		"prefix": "rfcp",
+		"prefix": "const-funct-comp-ts",
 		"body": [
 			"import * as React from 'react';\n",
 			"import clsxm from '@/lib/clsxm';\n",
@@ -73,7 +73,7 @@
 
 	//#region  //*=========== Commons ===========
 	"Region": {
-		"prefix": "reg",
+		"prefix": "region",
 		"scope": "javascript, typescript, javascriptreact, typescriptreact",
 		"body": [
 			"//#region  //*=========== ${1} ===========",
@@ -82,7 +82,7 @@
 		]
 	},
 	"Region CSS": {
-		"prefix": "regc",
+		"prefix": "regioncss",
 		"scope": "css, scss",
 		"body": [
 			"/* #region  /**=========== ${1} =========== */",
@@ -94,7 +94,7 @@
 
 	//#region  //*=========== Nextjs ===========
 	"Next Page Typescript": {
-		"prefix": "npts",
+		"prefix": "const-next-page",
 		"body": [
 			"import * as React from 'react';\n",
 			"import AppLayout from '@/components/layouts/AppLayout';\n",
@@ -113,7 +113,7 @@
 		]
 	},
 	"Next API": {
-		"prefix": "napi-get",
+		"prefix": "const-next-api",
 		"body": [
 			"import { NextApiRequest, NextApiResponse } from 'next';\n",
 			"export default async function ${1:${TM_FILENAME_BASE}}(req: NextApiRequest, res: NextApiResponse) {",
@@ -126,7 +126,7 @@
 		]
 	},
 	"Get Static Props": {
-		"prefix": "gsp",
+		"prefix": "const-getstaticprops",
 		"body": [
 			"export const getStaticProps = async (context: GetStaticPropsContext) => {",
 			"  return {",
@@ -136,7 +136,7 @@
 		]
 	},
 	"Get Static Paths": {
-		"prefix": "gspa",
+		"prefix": "const-getstaticpaths",
 		"body": [
 			"export const getStaticPaths: GetStaticPaths = async () => {",
 			"  return {",
@@ -149,7 +149,7 @@
 		]
 	},
 	"Get Server Side Props": {
-		"prefix": "gssp",
+		"prefix": "const-getserversideprops",
 		"body": [
 			"export const getServerSideProps = async (context: GetServerSidePropsContext) => {",
 			"  return {",
@@ -159,19 +159,19 @@
 		]
 	},
 	"Infer Get Static Props": {
-		"prefix": "igsp",
+		"prefix": "infergetstaticprops",
 		"body": "InferGetStaticPropsType<typeof getStaticProps>"
 	},
 	"Infer Get Server Side Props": {
-		"prefix": "igssp",
+		"prefix": "invergetserversideprops",
 		"body": "InferGetServerSidePropsType<typeof getServerSideProps>"
 	},
 	"Import useRouter": {
-		"prefix": "imust",
+		"prefix": "import-next-router",
 		"body": ["import { useRouter } from 'next/router';"]
 	},
 	"Import Next Image": {
-		"prefix": "imimg",
+		"prefix": "import-next-image",
 		"body": ["import Image from 'next/image';"]
 	},
 	"Import Next Link": {
